@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RepositoryPattern.Common\RepositoryPattern.Common.csproj" />
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RepositoryPattern.Common\RepositoryPattern.Common.csproj" />
+  </ItemGroup>
 </Project>

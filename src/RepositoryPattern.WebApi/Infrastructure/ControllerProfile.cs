@@ -17,8 +17,8 @@ namespace RepositoryPattern.WebApi.Infrastructure
         /// </summary>
         public ControllerProfile()
         {
-            this.CreateMap<QueryFooParameter, QueryFooDto>();
-            this.CreateMap<FooDto, FooViewModel>();
+            this.CreateMap<QueryCustomerParameter, QueryCustomerDto>();
+            this.CreateMap<CustomerDto, CustomerViewModel>();
         }
     }
 }

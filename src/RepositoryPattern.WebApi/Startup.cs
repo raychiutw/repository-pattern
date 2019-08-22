@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RepositoryPattern.Repository.Implement;
+using RepositoryPattern.Repository.Infrastructure;
 using RepositoryPattern.Repository.Interface;
 using RepositoryPattern.Service;
 using RepositoryPattern.Service.Interface;
@@ -41,9 +42,13 @@ namespace RepositoryPattern.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // 取得連線字串
+            var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
+
             // DI Register
-            services.AddScoped<IFooService, FooService>();
-            services.AddScoped<IFooRepository, FooRepository>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IDatabaseHelper>(x => new DatabaseHelper(connectionString));
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services

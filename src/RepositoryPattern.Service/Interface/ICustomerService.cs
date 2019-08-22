@@ -5,15 +5,15 @@ using RepositoryPattern.Common.Dto;
 namespace RepositoryPattern.Service.Interface
 {
     /// <summary>
-    ///  FooService 介面
+    ///  CustomerService 介面
     /// </summary>
-    public interface IFooService
+    public interface ICustomerService
     {
         /// <summary>
-        /// 取得 Foo
+        /// 取得 Customer
         /// </summary>
         /// <param name="dto">查詢條件</param>
         /// <returns></returns>
-        Task<IEnumerable<FooDto>> Get(QueryFooDto dto);
+        Task<IEnumerable<CustomerDto>> Get(QueryCustomerDto dto);
     }
 }

@@ -16,8 +16,8 @@ namespace RepositoryPattern.Service.Infrastructure
         /// </summary>
         public ServiceProfile()
         {
-            this.CreateMap<QueryFooDto, QueryFoo>();
-            this.CreateMap<Foo, FooDto>();
+            this.CreateMap<QueryCustomerDto, QueryCustomer>();
+            this.CreateMap<Customer, CustomerDto>();
         }
     }
 }

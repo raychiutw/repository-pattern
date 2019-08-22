@@ -1,8 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using RepositoryPattern.Repository.Infrastructure;
 
-namespace RepositoryPattern.WebApi.Repository.Infrastructure
+namespace RepositoryPattern.Repository.Infrastructure
 {
     /// <summary>
     /// Database 介面

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.Repository", "RepositoryPattern.Repository\RepositoryPattern.Repository.csproj", "{2A0B7181-8742-4CF7-A0DF-CABA543444F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.Repository", "RepositoryPattern.Repository\RepositoryPattern.Repository.csproj", "{2A0B7181-8742-4CF7-A0DF-CABA543444F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.Common", "RepositoryPattern.Common\RepositoryPattern.Common.csproj", "{A4C54707-32F5-4862-AC2D-7C5251658066}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.Common", "RepositoryPattern.Common\RepositoryPattern.Common.csproj", "{A4C54707-32F5-4862-AC2D-7C5251658066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.Service", "RepositoryPattern.Service\RepositoryPattern.Service.csproj", "{A3C584FA-31F1-4453-9275-49BB0D4D1F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.Service", "RepositoryPattern.Service\RepositoryPattern.Service.csproj", "{A3C584FA-31F1-4453-9275-49BB0D4D1F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.WebApi", "RepositoryPattern.WebApi\RepositoryPattern.WebApi.csproj", "{2A157000-BE6D-4300-A93F-E23B52C7A782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.WebApi", "RepositoryPattern.WebApi\RepositoryPattern.WebApi.csproj", "{2A157000-BE6D-4300-A93F-E23B52C7A782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

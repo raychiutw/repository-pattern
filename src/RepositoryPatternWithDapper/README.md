@@ -1,0 +1,1 @@
+# Repository Pattern 專用 IRepository (使用 Dapper) 

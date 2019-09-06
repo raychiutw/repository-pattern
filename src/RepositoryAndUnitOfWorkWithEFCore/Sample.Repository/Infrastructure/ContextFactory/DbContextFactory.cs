@@ -1,12 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sample.Repository.Infrastructure
+namespace Sample.Repository.Infrastructure.ContextFactory
 {
     /// <summary>
     /// DbContextFactory
     /// </summary>
-    /// <seealso cref="Sample.Repository.Infrastructure.IDbContextFactory" />
+    /// <seealso cref="Sample.Repository.Infrastructure.ContextFactory.IDbContextFactory" />
     public class DbContextFactory : IDbContextFactory
     {
         private readonly string _connectionString;
@@ -32,11 +32,14 @@ namespace Sample.Repository.Infrastructure
         {
             get
             {
+                var optionsBuilder = new DbContextOptionsBuilder();
+                optionsBuilder.UseSqlServer(this._connectionString);
+
                 if (this._dbContext == null)
                 {
                     Type t = typeof(DbContext);
                     this._dbContext =
-                        (DbContext)Activator.CreateInstance(t, this._connectionString);
+                        (DbContext)Activator.CreateInstance(t, optionsBuilder.Options);
                 }
                 return _dbContext;
             }

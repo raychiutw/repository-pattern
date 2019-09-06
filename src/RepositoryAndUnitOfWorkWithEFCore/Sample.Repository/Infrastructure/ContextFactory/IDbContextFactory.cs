@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Sample.Repository.Infrastructure
+namespace Sample.Repository.Infrastructure.ContextFactory
 {
     /// <summary>
-    /// IDbContextFactory
+    /// DbContextFactory 介面
     /// </summary>
     public interface IDbContextFactory
     {

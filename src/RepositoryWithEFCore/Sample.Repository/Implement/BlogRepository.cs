@@ -33,7 +33,7 @@ namespace Sample.Repository.Implement
         /// </summary>
         /// <param name="blog">實體</param>
         /// <returns></returns>
-        public async Task<bool> Add(Blog blog)
+        public async Task<bool> AddAsync(Blog blog)
         {
             _context.Add(blog);
             var count = await _context.SaveChangesAsync();
@@ -46,7 +46,7 @@ namespace Sample.Repository.Implement
         /// </summary>
         /// <param name="condition">查詢條件</param>
         /// <returns></returns>
-        public async Task<IEnumerable<Blog>> Get(BlogQuery condition)
+        public async Task<IEnumerable<Blog>> GetAsync(BlogQuery condition)
         {
             var blogs = await _context.Blog.ToListAsync();
             return blogs;
@@ -57,7 +57,7 @@ namespace Sample.Repository.Implement
         /// </summary>
         /// <param name="id">blog id</param>
         /// <returns></returns>
-        public async Task<bool> Remove(int id)
+        public async Task<bool> RemoveAsync(int id)
         {
             var blog = await _context.Blog.FindAsync(id);
             _context.Blog.Remove(blog);
@@ -71,7 +71,7 @@ namespace Sample.Repository.Implement
         /// </summary>
         /// <param name="blog">實體</param>
         /// <returns></returns>
-        public async Task<bool> Update(Blog blog)
+        public async Task<bool> UpdateAsync(Blog blog)
         {
             _context.Update(blog);
             var count = await _context.SaveChangesAsync();

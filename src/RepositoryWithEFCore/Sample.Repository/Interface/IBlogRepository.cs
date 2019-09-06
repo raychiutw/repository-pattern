@@ -13,24 +13,24 @@ namespace Sample.Repository.Interface
         /// 新增 Blog
         /// </summary>
         /// <param name="blog">實體</param>
-        Task<bool> Add(Blog blog);
+        Task<bool> AddAsync(Blog blog);
 
         /// <summary>
         /// 取得 Blog
         /// </summary>
         /// <param name="condition">查詢條件</param>
-        Task<IEnumerable<Blog>> Get(BlogQuery condition);
+        Task<IEnumerable<Blog>> GetAsync(BlogQuery condition);
 
         /// <summary>
         /// 刪除 Blog
         /// </summary>
         /// <param name="id">blog id</param>
-        Task<bool> Remove(int id);
+        Task<bool> RemoveAsync(int id);
 
         /// <summary>
         /// 更新 Blog
         /// </summary>
         /// <param name="blog">實體</param>
-        Task<bool> Update(Blog blog);
+        Task<bool> UpdateAsync(Blog blog);
     }
 }

@@ -9,8 +9,10 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sample.Common.Enities;
 using Sample.Repository.Db;
 using Sample.Repository.Implement;
+using Sample.Repository.Infrastructure.UnitOfWork;
 using Sample.Repository.Interface;
 using Sample.Service;
 using Sample.Service.Interface;
@@ -84,7 +86,11 @@ namespace Sample.WebApi
 
             // DI Register
             services.AddScoped<IBlogService, BlogService>();
-            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IGenericRepository<Blog>, GenericRepository<Blog>>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<DbContext, BloggingContext>();
+            services.AddDbContext<BloggingContext>(
+                 options => options.UseSqlServer(connection));
 
             services.AddSwaggerGen(c =>
             {
@@ -101,8 +107,6 @@ namespace Sample.WebApi
                 }
             });
 
-            services.AddDbContext<BloggingContext>(
-                options => options.UseSqlServer(connection));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services

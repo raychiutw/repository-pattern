@@ -33,22 +33,68 @@ namespace Sample.WebApi.Controllers
         }
 
         /// <summary>
-        /// Get Blog
+        /// 新增 Blog
+        /// </summary>
+        /// <param name="parameter">Blog</param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<bool> AddAsync([FromBody] BlogParameter parameter)
+        {
+            // Convert BlogParameter to BlogQueryDto
+            var blogDto = this._mapper.Map<BlogDto>(parameter);
+
+            var status = await this._blogService.AddAsync(blogDto);
+
+            return status;
+        }
+
+        /// <summary>
+        /// 取得 Blog
         /// </summary>
         /// <param name="parameter">查詢參數</param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IEnumerable<BlogViewModel>> Get([FromQuery] BlogQueryParameter parameter)
+        public async Task<IEnumerable<BlogViewModel>> GetAsync([FromQuery] BlogQueryParameter parameter)
         {
-            // Convert BlogParameter to BlogQueryDto
+            // Convert BlogQueryParameter to BlogQueryDto
             var blogQueryDto = this._mapper.Map<BlogQueryDto>(parameter);
 
-            var blogDtos = await this._blogService.Get(blogQueryDto);
+            var blogDtos = await this._blogService.GetAsync(blogQueryDto);
 
             // Convert BlogDto to BlodViewModel
             var blogViewModels = this._mapper.Map<IEnumerable<BlogViewModel>>(blogDtos);
 
             return blogViewModels;
+        }
+
+        /// <summary>
+        /// 刪除 Blog
+        /// </summary>
+        /// <param name="id">Blog Id</param>
+        /// <returns></returns>
+        [HttpDelete]
+        [Route("/{id}")]
+        public async Task<bool> RemoveAsync(int id)
+        {
+            var status = await this._blogService.RemoveAsync(id);
+
+            return status;
+        }
+
+        /// <summary>
+        /// 更新 Blog
+        /// </summary>
+        /// <param name="parameter">Blog</param>
+        /// <returns></returns>
+        [HttpPatch]
+        public async Task<bool> UpdateAsync([FromBody] BlogParameter parameter)
+        {
+            // Convert BlogParameter to BlogQueryDto
+            var blogDto = this._mapper.Map<BlogDto>(parameter);
+
+            var status = await this._blogService.UpdateAsync(blogDto);
+
+            return status;
         }
     }
 }

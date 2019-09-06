@@ -16,7 +16,6 @@ namespace Sample.Service.Infrastructure
         /// </summary>
         public ServiceProfile()
         {
-            this.CreateMap<BlogQueryDto, BlogQuery>();
             this.CreateMap<Blog, BlogDto>();
         }
     }

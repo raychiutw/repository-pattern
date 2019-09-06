@@ -19,6 +19,8 @@ namespace Sample.WebApi.Infrastructure
         {
             this.CreateMap<BlogQueryParameter, BlogQueryDto>();
             this.CreateMap<BlogDto, BlogViewModel>();
+
+            this.CreateMap<BlogDto, BlogDto>();
         }
     }
 }

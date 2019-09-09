@@ -52,7 +52,7 @@ namespace Sample.Service
 
             var blogs = await this._blogRepository.GetAsync(blogQuery);
 
-            // Convert Customer to CustomerDto
+            // Convert Blog to BlogDto
             var blogDtos = this._mapper.Map<IEnumerable<BlogDto>>(blogs);
 
             return blogDtos;

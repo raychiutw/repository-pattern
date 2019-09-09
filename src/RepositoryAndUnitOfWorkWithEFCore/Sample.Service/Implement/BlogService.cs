@@ -52,9 +52,9 @@ namespace Sample.Service
         /// <returns></returns>
         public async Task<IEnumerable<BlogDto>> GetAsync(BlogQueryDto blogQueryDto)
         {
-            var blogs = await this._blogRepository.GetAsync(x => x.BlogId == blogQueryDto.BlogId);
+            var blogs = await this._blogRepository.GetAllAsync();
 
-            // Convert Customer to CustomerDto
+            // Convert Blog to BlogDto
             var blogDtos = this._mapper.Map<IEnumerable<BlogDto>>(blogs);
 
             return blogDtos;

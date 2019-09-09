@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Sample.Common.Dto;
 using Sample.Common.Enities;
-using Sample.Repository.Infrastructure.UnitOfWork;
+using Sample.Repository.Infrastructure;
 using Sample.Repository.Interface;
 using Sample.Service.Interface;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Sample.Repository.Infrastructure.UnitOfWork;
+using Sample.Repository.Infrastructure;
 using Sample.Repository.Interface;
 
 namespace Sample.Repository.Implement

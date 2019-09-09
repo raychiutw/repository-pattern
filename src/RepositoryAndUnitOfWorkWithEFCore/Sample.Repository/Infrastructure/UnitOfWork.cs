@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sample.Repository.Infrastructure.UnitOfWork
+namespace Sample.Repository.Infrastructure
 {
     /// <summary>
     /// UnitOfWork

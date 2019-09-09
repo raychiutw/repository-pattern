@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Sample.Common.Enities;
 using Sample.Repository.Db;
 using Sample.Repository.Implement;
-using Sample.Repository.Infrastructure.UnitOfWork;
+using Sample.Repository.Infrastructure;
 using Sample.Repository.Interface;
 using Sample.Service;
 using Sample.Service.Interface;

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Sample.Common.Dto;
-using Sample.Common.Enities;
+using Sample.Repository.Enities;
+using Sample.Service.Dtos;
 
 namespace Sample.Service.Infrastructure
 {

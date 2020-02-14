@@ -10,10 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Sample.Repository.Db;
-using Sample.Repository.Implement;
-using Sample.Repository.Interface;
-using Sample.Service;
-using Sample.Service.Interface;
+using Sample.Repository.Implements;
+using Sample.Repository.Interfaces;
+using Sample.Service.Implements;
+using Sample.Service.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Sample.WebApi

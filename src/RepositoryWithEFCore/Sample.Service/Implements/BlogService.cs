@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Sample.Common.Dto;
-using Sample.Common.Enities;
-using Sample.Repository.Interface;
-using Sample.Service.Interface;
+using Sample.Repository.Enities;
+using Sample.Repository.Interfaces;
+using Sample.Service.Dtos;
+using Sample.Service.Interfaces;
 
-namespace Sample.Service
+namespace Sample.Service.Implements
 {
     /// <summary>
     /// BlogService

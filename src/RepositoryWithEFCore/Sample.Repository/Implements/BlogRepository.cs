@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Sample.Common.Enities;
 using Sample.Repository.Db;
-using Sample.Repository.Interface;
+using Sample.Repository.Enities;
+using Sample.Repository.Interfaces;
 
-namespace Sample.Repository.Implement
+namespace Sample.Repository.Implements
 {
     /// <summary>
     /// Class BlogRepository.
-    /// Implements the <see cref="Sample.Repository.Interface.IBlogRepository" />
+    /// Implements the <see cref="Sample.Repository.Interfaces.IBlogRepository" />
     /// </summary>
-    /// <seealso cref="Sample.Repository.Interface.IBlogRepository" />
+    /// <seealso cref="Sample.Repository.Interfaces.IBlogRepository" />
     public class BlogRepository : IBlogRepository
     {
         /// <summary>

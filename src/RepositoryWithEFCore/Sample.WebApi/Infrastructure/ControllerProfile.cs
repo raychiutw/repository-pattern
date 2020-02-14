@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Sample.Common.Dto;
+using Sample.Service.Dtos;
 using Sample.WebApi.Controllers.Parameters;
 using Sample.WebApi.Controllers.ViewModels;
 

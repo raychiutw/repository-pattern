@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Sample.Common.Enities;
+using Sample.Repository.Enities;
 
 namespace Sample.Repository.Db
 {

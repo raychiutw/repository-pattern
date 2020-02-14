@@ -2,8 +2,8 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Sample.Common.Dto;
-using Sample.Service.Interface;
+using Sample.Service.Dtos;
+using Sample.Service.Interfaces;
 using Sample.WebApi.Controllers.Parameters;
 using Sample.WebApi.Controllers.ViewModels;
 

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Sample.Common.Dto;
+using Sample.Service.Dtos;
 
-namespace Sample.Service.Interface
+namespace Sample.Service.Interfaces
 {
     /// <summary>
     ///  BlogService 介面

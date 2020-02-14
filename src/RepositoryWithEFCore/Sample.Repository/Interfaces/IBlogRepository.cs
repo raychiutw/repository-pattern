@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Sample.Common.Enities;
+using Sample.Repository.Enities;
 
-namespace Sample.Repository.Interface
+namespace Sample.Repository.Interfaces
 {
     /// <summary>
     /// Interface IBlogRepository
